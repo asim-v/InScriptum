@@ -1,19 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-body {
-  min-height: 100vh;
-  background: #180b24;
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  /* center the .app container horizontally */
-  display: flex;
-  justify-content: center;
-}
+
 /* display the header, form and section in a single column */
 .app {
   display: flex;
@@ -31,7 +17,6 @@ body {
 }
 /* absolute position the label above the form */
 .app form label {
-  z-index: -5;
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -52,10 +37,11 @@ body {
   transition-delay: 0.15s; /* small delay as the focus is gained */
 }
 .app form input {
+  z-index: 10;
   outline: none;
   flex-grow: 1;
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 5rem;
   color: inherit;
   background: none;
   border: none;
@@ -124,7 +110,7 @@ body {
   transform: translate(-50%, 5px);
   white-space: nowrap;
   background: #fff;
-  color: #000;
+  color: #0001FF;
   /* include more whitespace atop the container to make space for the clip-path */
   padding: 0.5rem 1rem;
   padding-top: 1rem;
@@ -162,3 +148,7 @@ body {
 .app section article div p {
   font-size: 0.9rem;
 }
+
+
+
+

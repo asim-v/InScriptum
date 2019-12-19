@@ -124,6 +124,7 @@ vara[2] = new Vara(
     autoAnimation: false
   }
 );
+
 vara[2].ready(function() {
   $(".front:not(.last)").click(function() {
     var ix = $(this)

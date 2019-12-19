@@ -98,23 +98,217 @@
 
     <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
-
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>
+    <div id="home" class="s-home target-section" data-parallax="scroll" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="home-content">
 
             <div class="row home-content__main">
 
-                <h3>Welcome to Glint</h3>
+                <link rel="stylesheet" href="css/searchstyle.css">
+                <div class="app">
+                    <svg hidden style="opacity: 0; width: 0; height: 0; position: absolute; top: 100%; left: 100%;">
+                        <defs>
+                            <!-- mask to cut out sections of the letter b -->
+                            <linearGradient id="gradient-book" gradientUnits="userSpaceOnUse" y1="0" y2="0" x1="0" x2="25">
+                                <stop stop-color="#FF184A" offset="0"></stop>
+                                <stop stop-color="#311839" offset="1"></stop>
+                            </linearGradient>
+                            <!-- symbols describing the books included later in the project
+                                three variants with different patterns -->
+                            <symbol id="book-1">
+                                <g>
+                                    <rect
+                                        fill="#FF184A"
+                                        x="5"
+                                        y="0"
+                                        width="15"
+                                        height="125"
+                                        rx="2">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="5"
+                                        y="5"
+                                        width="15"
+                                        height="10">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="5"
+                                        y="110"
+                                        width="15"
+                                        height="10">
+                                    </rect>
+                                    <rect
+                                        fill="url(#gradient-book)"
+                                        x="5"
+                                        y="0"
+                                        width="15"
+                                        height="125"
+                                        rx="2"
+                                        opacity="0.6">
+                                    </rect>
+                                </g>
+                            </symbol>
+                            <symbol id="book-2">
+                                <g>
+                                    <rect
+                                        fill="#FF184A"
+                                        x="0"
+                                        y="0"
+                                        width="25"
+                                        height="125"
+                                        rx="3.5">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="0"
+                                        y="10"
+                                        width="25"
+                                        height="2">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="0"
+                                        y="17"
+                                        width="25"
+                                        height="20">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="0"
+                                        y="42"
+                                        width="25"
+                                        height="2">
+                                    </rect>
+                                    <rect
+                                        fill="url(#gradient-book)"
+                                        x="0"
+                                        y="0"
+                                        width="25"
+                                        height="125"
+                                        rx="3.5"
+                                        opacity="0.6">
+                                    </rect>
+                                </g>
+                            </symbol>
+                            <symbol id="book-3">
+                                <g>
+                                    <rect
+                                        fill="#FF184A"
+                                        x="0.5"
+                                        y="25"
+                                        width="24"
+                                        height="100"
+                                        rx="5">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="5.5"
+                                        y="50"
+                                        width="2"
+                                        height="35">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="11.5"
+                                        y="45"
+                                        width="2"
+                                        height="45">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="17.5"
+                                        y="50"
+                                        width="2"
+                                        height="35">
+                                    </rect>
+                                    <rect
+                                        fill="url(#gradient-book)"
+                                        x="0.5"
+                                        y="25"
+                                        width="24"
+                                        height="100"
+                                        rx="5"
+                                        opacity="0.6">
+                                    </rect>
+                                </g>
+                            </symbol>
+                            <symbol id="book-4">
+                                <g>
+                                    <rect
+                                        fill="#FF184A"
+                                        x="6"
+                                        y="0"
+                                        width="13"
+                                        height="125"
+                                        rx="2">
+                                    </rect>
+                                    <rect
+                                        fill="#932243"
+                                        x="11.5"
+                                        y="12.5"
+                                        width="2"
+                                        height="100"
+                                        rx="2">
+                                    </rect>
+                                    <rect
+                                        fill="url(#gradient-book)"
+                                        x="6"
+                                        y="0"
+                                        width="13"
+                                        height="125"
+                                        rx="2"
+                                        opacity="0.6">
+                                    </rect>
+                                </g>
+                            </symbol>
+                        </defs>
+                    </svg>
 
-                <h1>
-                    We are a creative group <br>
-                    of people who design <br>
-                    influential brands and <br>
-                    digital experiences.
-                </h1>
+                    <form>
+                        <label for="title"><h1>Search by title</h1></label>
+                        <h2><input type="text" name="title" id="title"></h2>
+
+                        <button aria-describedby="search-book">
+                            <svg viewBox="0 0 100 100" width="30" height="30">
+                                <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="5">
+                                    <circle
+                                        cx="42"
+                                        cy="42"
+                                        r="25">
+                                    </circle>
+                                    <path
+                                        stroke-linecap="round"
+                                        d="M 67 67 l 15 15">
+                                    </path>
+                                </g>
+                            </svg>
+                            <span hidden id="search-book">Search for book</span>
+                        </button>
+                    </form>
+
+                    <!-- article structure
+                        svg, drawing the side of the book
+                        div, describing the book's information
+                        -->
+                    <section>
+                        <!-- <article>
+                            <svg viewBox="0 0 25 125" width="25" height="125">
+                                <use href="#book-1"></use>
+                            </svg>
+                            <div>
+                                <h1>Book name</h1>
+                                <h2>Author</h2>
+                                ...
+                            </div>
+                        </article> -->
+                    </section>
+                </div>
+                <script  src="js/searchscript.js"></script>
 
                 <div class="home-content__buttons">
                     <a href="#contact" class="smoothscroll btn btn--stroke">
@@ -157,7 +351,7 @@
         </ul> 
         <!-- end home-social -->
 
-    </section> <!-- end s-home -->
+    </div> <!-- end s-home -->
 
 
     <!-- about
@@ -797,13 +991,17 @@
     ================================================== -->
     <div id="preloader">
         <div id="loader">
-            <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+                <div class="bookshelf_wrapper">
+                  <ul class="books_list">
+                    <li class="book_item first"></li>
+                    <li class="book_item second"></li>
+                    <li class="book_item third"></li>
+                    <li class="book_item fourth"></li>
+                    <li class="book_item fifth"></li>
+                    <li class="book_item sixth"></li>
+                  </ul>
+                  <div class="shelf"></div>
+                </div>
         </div>
     </div>
 
